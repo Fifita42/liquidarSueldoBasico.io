@@ -308,7 +308,7 @@ function resultado(){
       siemprepresente = true;
     };
 
- let sueldoBruto = Number(sbnh+tot100horas+tot50horas+ganaPorPresencialidad);
+ let sueldoBruto = Number(sbnh+tot100horas+tot50horas+ganaPorPresencialidad)-pierdePorPresencialidad;
  
    aportes += calaport();
    function calaport(){
@@ -320,7 +320,7 @@ function resultado(){
    return tot;
  }
   let totViaticos = Number(Number(viatico)*(Number(habiles) - Number(inasistencia)));
-  aCobrar = Number((sueldoBruto-(aportes+totFac+pierdePorPresencialidad))+totViaticos);
+  aCobrar = Number((sueldoBruto-(aportes+totFac))+totViaticos);
   if(siemprepresente)aCobrar+=presencialidad;
   tabla = document.createElement('table');
  tabla.setAttribute("class","table");
